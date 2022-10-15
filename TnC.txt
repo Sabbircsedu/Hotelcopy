@@ -1,0 +1,40 @@
+import 'package:flutter/material.dart';
+import 'dart:async' show Future;
+import 'package:flutter/services.dart' show rootBundle;
+
+
+
+
+class TnC_Page extends StatefulWidget {
+  var TnC = "TnC.txt"; //path to text file asset
+
+
+  @override
+  State<TnC_Page> createState() => _TnC_PageState();
+}
+
+class _TnC_PageState extends State<TnC_Page> {
+  @override
+  Widget build(BuildContext context) {
+    return   SingleChildScrollView(
+      child: SafeArea(
+        child: Scaffold(
+          appBar:  AppBar(
+            title: const Text("TnC_Page"),
+          ),
+          body: Column(
+            children: [
+              Text(widget.TnC),
+
+              Container(
+
+              ),
+
+            ],
+          ),
+
+        ),
+      ),
+    );
+  }
+}
